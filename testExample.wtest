@@ -1,9 +1,17 @@
-import example.pepita
+import gladeadores.*
+import armas.*
 
-describe "group of tests for pepita" {
+describe "group of tests for coliseo" {
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+  test "Un gladiador ataca a otro y le causa danio" {
+    const espada = new ArmasDeFilo(largo = 1, filo = 1)
+    const maza = new ArmasContundentes(peso = 10)
+
+    const juancito = new Mirmillon(destreza = 10, arma = espada, armadura = escudo, fuerza = )
+    const tito = new Mirmillon(destreza = 5, arma = maza, armadura = casco, fuerza = )
+
+    tito.atacar(juancito)
+    assert.equals(100-(50-20), juancito.vida())
   }
 
 }
